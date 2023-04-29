@@ -1,0 +1,19 @@
+{
+  "name": "higgsino.js",
+  "version": "0.1.01",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "author": "Boson",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "typescript": "^5.0.4"
+  }
+}
