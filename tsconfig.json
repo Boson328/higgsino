@@ -2,13 +2,13 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "CommonJS",
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "./dist",
     "esModuleInterop": true,
-    "declaration": true,  // ← 追記（コンパイルしたtsファイルの中でexportしているもの全ての型定義ファイルを出力する）
-    "sourceMap": true,  // ← 追記（ソースマップを出力する）
-    "outDir": "./dist",  // ← 追記（コンパイル結果の出力先を指定）
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src"]
 }

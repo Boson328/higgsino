@@ -2,3 +2,5 @@
 /src
 /test
 tsconfig.json
+/dist/cdn.js
+/dist/cdn.d.ts
