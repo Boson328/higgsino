@@ -27,7 +27,19 @@ export class Word {
   }
 
   get kana() {
-    return this._kana;
+    return {
+      normal: this._kana,
+      typed: this._kana.slice(0, this._charIndex),
+      untyped: this._kana.slice(this._charIndex),
+    };
+  }
+
+  get next() {
+    return this._isFinish
+      ? ""
+      : this._roman[this._charIndex][this._pattern[this._charIndex]][
+          this._charIndex2
+        ];
   }
 
   get roman(): {
@@ -98,6 +110,9 @@ export class Word {
         }
       }
       return { isMiss: true, isFinish: false };
-    } else return { isMiss: false, isFinish: true };
+    } else {
+      return { isMiss: false, isFinish: true };
+    }
   }
 }
+

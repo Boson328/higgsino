@@ -1,14 +1,12 @@
 {
   "name": "higgsino.js",
-  "version": "0.1.25",
+  "version": "0.1.28",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc && webpack",
-    "webb": "webpack --mode=production",
-    "webs": "webpack-cli serve --mode development",
     "prepare": "npm run build"
   },
   "author": "Boson",
