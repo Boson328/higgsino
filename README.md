@@ -1,7 +1,5 @@
 <p align="center"><img src="./higgsino.svg" margin-top="20" /></p>
 
-<h2 align="center" >
-<big>
-    HIGGSINO.JS
-</big>
-</h2>
+<h1 align="center" >
+    HIGGSINO<small>.JS</small>
+</h1>
