@@ -1,4 +1,4 @@
-<p align="center"><img src="./higgsino.svg" margin-top="20" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/121548464/237042388-7ac2fc30-926f-439d-9be3-8025dafd3808.svg" /></p>
 
 <h1 align="center" >
 HIGGSINO.JS
@@ -10,7 +10,7 @@ Typing software production made easy
 
 <br /><br /><br />
 
-[README in Japanese](https://github.com)
+[README in Japanese](https://github.com/Boson328/higgsino)
 
 ## Overview
 

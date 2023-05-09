@@ -26,11 +26,19 @@ export class Word {
     return this._kanji;
   }
 
-  get kana() {
+  get kana(): {
+    text: {
+      normal: string;
+      typed: string;
+      untyped: string;
+    };
+  } {
     return {
-      normal: this._kana,
-      typed: this._kana.slice(0, this._charIndex),
-      untyped: this._kana.slice(this._charIndex),
+      text: {
+        normal: this._kana,
+        typed: this._kana.slice(0, this._charIndex),
+        untyped: this._kana.slice(this._charIndex),
+      },
     };
   }
 
@@ -42,34 +50,39 @@ export class Word {
         ];
   }
 
-  get roman(): {
-    text: string;
-    array: string[][];
-    typed: string[];
-    untyped: string[];
-  } {
+  get roman() {
     return {
-      text: this._roman
-        .map((rome, index) => rome[this._pattern[index]])
-        .join(""),
-      array: this._roman,
-      typed: this._roman.flatMap((rome, index) => {
-        if (index < this._charIndex) {
-          return rome[this._pattern[index]];
-        } else if (
-          index == this._charIndex &&
-          rome[this._pattern[index]].length > this._charIndex2
-        ) {
-          return rome[this._pattern[index]].slice(0, this._charIndex2);
-        } else return [];
-      }),
-      untyped: this._roman.flatMap((rome, index) => {
-        if (index > this._charIndex) {
-          return rome[this._pattern[index]];
-        } else if (index == this._charIndex) {
-          return rome[this._pattern[index]].slice(this._charIndex2);
-        } else return [];
-      }),
+      text: {
+        normal: this._roman
+          .map((rome, index) => rome[this._pattern[index]])
+          .join(""),
+        typed: this._roman
+          .flatMap((rome, index) => {
+            if (index < this._charIndex) {
+              return rome[this._pattern[index]];
+            } else if (
+              index == this._charIndex &&
+              rome[this._pattern[index]].length > this._charIndex2
+            ) {
+              return rome[this._pattern[index]].slice(0, this._charIndex2);
+            } else return [];
+          })
+          .join(""),
+        untyped: this._roman
+          .flatMap((rome, index) => {
+            if (index > this._charIndex) {
+              return rome[this._pattern[index]];
+            } else if (index == this._charIndex) {
+              return rome[this._pattern[index]].slice(this._charIndex2);
+            } else return [];
+          })
+          .join(""),
+      },
+      array: {
+        normal: this._roman,
+        typed: this._roman.slice(0, this._charIndex),
+        untyped: this._roman.slice(this._charIndex),
+      },
     };
   }
 
@@ -115,4 +128,3 @@ export class Word {
     }
   }
 }
-
