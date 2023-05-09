@@ -18,6 +18,7 @@ export function kanaToRoman(kana: string) {
   function isSmallChar() {
     return !!remStr.slice(0, 1).match(/^[ぁぃぅぇぉゃゅょ]$/);
   }
+  
 
   // ひらがなのある限りループ
   while (remStr) {
