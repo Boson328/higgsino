@@ -12,7 +12,7 @@ HIGGSINO.JS
 
 <br /><br /><br />
 
-[README in English](https://github.com/Boson328/higgsino/blob/main/README-us.md)
+[README in English](https://github.com/Boson328/higgsino/blob/main/README-us.md)　/　[ホームページ（日本語）](https://higgsino.boson.jp)
 
 ## 概要
 
@@ -26,7 +26,7 @@ HIGGSINO.JS
 
 ## 導入
 
-Node.jsの場合
+npmやyarnでインストール（Node.js使用）
 
 ```
 npm i --save higgsino
@@ -36,6 +36,12 @@ npm i --save higgsino
 
 ```
 yarn add --save higgsino
+```
+
+headタグに埋め込む（CDN使用）
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/higgsino/dist/main.min.js"></script>
 ```
 
 ## 使い方
@@ -78,7 +84,7 @@ console.log("ローマ字の打ってない配列", word.roman.array.typed);
 
 タイピングしたらtyped関数を使えば、ミスしたかどうか確かめ、合っている場合は次の文字にすることができます。
 
-引数にKeyboardEventのkeyを渡して、必要であればeventにpreventDefaultをしておいてください。
+引数にKeyboardEventのkeyを渡して、必要であればpreventDefault関数を実行しておいてください。
 
 ```javascript
 window.addEventListener("keydown", (event) => {
@@ -88,4 +94,33 @@ window.addEventListener("keydown", (event) => {
 })
 ```
 
-## 
+## テスト
+
+jestでテストします
+```
+npm test
+```
+
+## ビルド
+
+tscとwebpackを利用します
+```
+npm run build
+```
+または
+```
+npx tsc && npx webpack
+```
+
+## 開発者
+
+[HomePage](https://boson.jp)　/　[GitHub](https://github.com/Boson328)
+
+[Twitter](https://twitter.com/boson328)　/　[Zenn](https://zenn.dev/boson)
+
+[YouTube](https://www.youtube.com/channel/UCXRxlOWvs6MHaFIXGtw2Y4A)　/　[Misskey](https://misskey.io/)
+
+
+## ライセンス
+
+Higgsino.jsは [MIT License](https://github.com/Boson328/higgsino/blob/main/LICENSE) で保護されています。

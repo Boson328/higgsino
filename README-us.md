@@ -12,7 +12,7 @@ Make typing software development easier
 
 <br /><br /><br />
 
-[README in Japanese](https://github.com/Boson328/higgsino)
+[README日本語版](https://github.com/Boson328/higgsino)　/　[Homepage in English](https://higgsino.boson.jp/us)
 
 ## Overview
 
@@ -24,7 +24,7 @@ By introducing this library, the following tasks become easier to accomplish:
 - Reproduction of typing behavior
 - Support for all typing methods (e.g. "yuxtsucurijikkilyou" for "ゆっくりじっきょう")
 
-## Installation
+## Install
 
 ```
 npm i --save higgsino
@@ -38,5 +38,4 @@ yarn add --save higgsino
 
 ## Usage
 
-## 
-
+##
