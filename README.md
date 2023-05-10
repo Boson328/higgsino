@@ -1,10 +1,10 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/121548464/237051613-2c859c35-3695-4666-97b2-22acc667472f.svg" /></p>
 
-<a href="https://higgsino.boson.jp">
 <h1 align="center" >
+<a href="https://higgsino.boson.jp">
 HIGGSINO.JS
-</h1>
 </a>
+</h1>
 
 <h3 align="center" >
 タイピングソフト制作を簡単に
