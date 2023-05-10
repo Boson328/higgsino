@@ -26,4 +26,16 @@ HIGGSINO.JS
 
 ## 使い方
 
+タイピングしたらtyped関数を使えば、ミスしたかどうか確かめ、合っている場合は次の文字にすることができます。
+
+引数にKeyboardEventのkeyを渡して、必要であればeventにpreventDefaultをしておいてください。
+
+```javascript
+window.addEventListener("keydown", (event) => {
+  event.preventDefault();
+  // ミスしたかどうかと、打ち終わったかどうかが返ってくる
+  const { isMiss, isFinish } = word.typed(event.key); 
+})
+```
+
 ## 
