@@ -1,11 +1,13 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/121548464/237042388-7ac2fc30-926f-439d-9be3-8025dafd3808.svg" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/121548464/237051613-2c859c35-3695-4666-97b2-22acc667472f.svg" /></p>
 
-<h1 align="center" >
+<a href="https://higgsino.boson.jp/us">
+<h1 align="center">
 HIGGSINO.JS
 </h1>
+</a>
 
 <h3 align="center" >
-Typing software production made easy
+Make typing software development easier
 </h3>
 
 <br /><br /><br />
@@ -14,16 +16,26 @@ Typing software production made easy
 
 ## Overview
 
-This library was created to help producers of typing software (especially romanized typing software).
+This library was created to assist in the development of typing software, especially for Roman alphabet typing.
 
-By installing this library, you will be able to easily perform the following tasks
+By introducing this library, the following tasks become easier to accomplish:
 
-- Convert Hiragana to Romaji
-- Reproduce typing actions
-- Support all typing styles (e.g., ゆっくりじっきょう → yuxtsucurijikkilyou)
+- Conversion from Hiragana to Roman characters
+- Reproduction of typing behavior
+- Support for all typing methods (e.g. "yuxtsucurijikkilyou" for "ゆっくりじっきょう")
 
-## 導入
+## Installation
 
-## 使い方
+```
+npm i --save higgsino
+```
+
+or
+
+```
+yarn add --save higgsino
+```
+
+## Usage
 
 ## 

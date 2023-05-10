@@ -1,8 +1,10 @@
-<p align="center"><img src="https://user-images.githubusercontent.com/121548464/237042388-7ac2fc30-926f-439d-9be3-8025dafd3808.svg" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/121548464/237051613-2c859c35-3695-4666-97b2-22acc667472f.svg" /></p>
 
+<a href="https://higgsino.boson.jp">
 <h1 align="center" >
 HIGGSINO.JS
 </h1>
+</a>
 
 <h3 align="center" >
 タイピングソフト制作を簡単に
@@ -14,7 +16,7 @@ HIGGSINO.JS
 
 ## 概要
 
-このライブラリはタイピングソフト（特にローマ字タイピングソフト）の制作者を手助けするために作られました。
+このライブラリはタイピングソフト（特にローマ字タイピングソフト）の開発を補助するために作られました。
 
 導入することで以下のようなことが簡単に行えるようになります。
 
@@ -23,6 +25,20 @@ HIGGSINO.JS
 - すべての打ち方対応 ( 例: ゆっくりじっきょう → yuxtsucurijikkilyou )
 
 ## 導入
+
+Node.jsの場合
+
+```
+npm i --save higgsino
+```
+
+または
+
+```
+yarn add --save higgsino
+```
+
+
 
 ## 使い方
 
