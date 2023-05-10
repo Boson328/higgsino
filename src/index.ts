@@ -40,14 +40,28 @@ export class Word {
     };
   }
 
+  // 一番関連性の高いやつが配列の先頭に来る
   get next() {
-    return this._isFinish
-      ? ""
-      : this._roman[this._charIndex].flatMap((rome) => {
-          if (rome.slice(0, this._charIndex2 - 1) == this._charTyped) {
+    if (this._isFinish) return [""];
+    else {
+      const dup: string[] = [
+        this._roman[this._charIndex][this._pattern[this._charIndex]][
+          this._charIndex2
+        ],
+
+        ...this._roman[this._charIndex].flatMap((rome, index) => {
+          if (rome.slice(0, this._charIndex2) == this._charTyped) {
             return rome[this._charIndex2];
-          } else return []; // flatMapで[]を返すと消える。
-        });
+          } else {
+            return []; // flatMapで[]を返して消す
+          }
+        }),
+      ];
+
+      // Setで重複削除
+      const undup: string[] = [...new Set(dup)];
+      return undup;
+    }
   }
 
   get roman(): text & {
@@ -70,7 +84,9 @@ export class Word {
             rome[this._pattern[index]].length > this._charIndex2
           ) {
             return rome[this._pattern[index]].slice(0, this._charIndex2);
-          } else return [];
+          } else {
+            return [];
+          }
         })
         .join(""),
       untyped: this._roman
@@ -79,7 +95,9 @@ export class Word {
             return rome[this._pattern[index]];
           } else if (index == this._charIndex) {
             return rome[this._pattern[index]].slice(this._charIndex2);
-          } else return [];
+          } else {
+            return [];
+          }
         })
         .join(""),
       array: {
@@ -103,7 +121,7 @@ export class Word {
             this._charIndex++; // nは打ち終わったことになるから
             this._charIndex2 = 1; // この時点でsは打ち終わっているので、charIndex2を1にする。
             this._charTyped = key; // 本来はいったんcharTypedを空にするが、省略しても問題ない。
-            
+
             return { isMiss: false, isFinish: false };
           }
         }
