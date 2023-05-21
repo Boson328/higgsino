@@ -1,9 +1,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/121548464/237051613-2c859c35-3695-4666-97b2-22acc667472f.svg" /></p>
 
 <h1 align="center" >
-<a href="https://higgsino.boson.jp">
 HIGGSINO.JS
-</a>
 </h1>
 
 <h3 align="center" >
@@ -12,7 +10,7 @@ HIGGSINO.JS
 
 <br /><br /><br />
 
-[README in English](https://github.com/Boson328/higgsino/blob/main/README-us.md)　/　[ホームページ（日本語）](https://higgsino.boson.jp)
+[README in English](https://github.com/Boson328/higgsino/blob/main/README-us.md)
 
 ## 概要
 
@@ -73,13 +71,13 @@ console.log("よみがなの打った部分を取得", word.kana.typed);
 console.log("よみがなの打ってない部分を取得", word.kana.untyped);
 
 // Roman
-console.log("ローマ字の全文字", word.roman.all);
-console.log("ローマ字の打った文字", word.roman.typed);
-console.log("ローマ字の打ってない文字", word.roman.untyped);
+console.log("ローマ字の全文字を取得", word.roman.all);
+console.log("ローマ字の打った文字を取得", word.roman.typed);
+console.log("ローマ字の打ってない文字を取得", word.roman.untyped);
 
-console.log("ローマ字の全配列", word.roman.array.all);
-console.log("ローマ字の打った配列", word.roman.array.typed);
-console.log("ローマ字の打ってない配列", word.roman.array.typed);
+console.log("ローマ字の全配列を取得", word.roman.array.all);
+console.log("ローマ字の打った配列を取得", word.roman.array.typed);
+console.log("ローマ字の打ってない配列を取得", word.roman.array.typed);
 ```
 
 タイピングしたらtyped関数を使えば、ミスしたかどうか確かめ、合っている場合は次の文字にすることができます。
@@ -94,14 +92,24 @@ window.addEventListener("keydown", (event) => {
 })
 ```
 
-## テスト
+## 開発者
+
+[HomePage](https://boson.jp)　/　[GitHub](https://github.com/Boson328)
+
+[Twitter](https://twitter.com/boson328)　/　[Zenn](https://zenn.dev/boson)
+
+[YouTube](https://www.youtube.com/channel/UCXRxlOWvs6MHaFIXGtw2Y4A)　/　[Misskey](https://misskey.io/@boson)
+
+## 開発者注意事項
+
+### テスト
 
 jestでテストします
 ```
 npm test
 ```
 
-## ビルド
+### ビルド
 
 tscとwebpackを利用します
 ```
@@ -112,15 +120,7 @@ npm run build
 npx tsc && npx webpack
 ```
 
-## 開発者
-
-[HomePage](https://boson.jp)　/　[GitHub](https://github.com/Boson328)
-
-[Twitter](https://twitter.com/boson328)　/　[Zenn](https://zenn.dev/boson)
-
-[YouTube](https://www.youtube.com/channel/UCXRxlOWvs6MHaFIXGtw2Y4A)　/　[Misskey](https://misskey.io/)
-
-
 ## ライセンス
 
 Higgsino.jsは [MIT License](https://github.com/Boson328/higgsino/blob/main/LICENSE) で保護されています。
+
