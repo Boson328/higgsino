@@ -17,11 +17,15 @@ export function kanaToRoman(kana: string) {
   function isSmallChar() {
     return !!copiedKana.slice(0, 1).match(/^[ぁぃぅぇぉゃゅょ]$/);
   }
-  
+
 
   // ひらがなをすべて処理する
   while (copiedKana) {
     currentKana = splice();
+    // 全角→半角
+    currentKana = currentKana.replace(/[Ａ-Ｚａ-ｚ]/g, function (s) {
+      return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    })
     nextRoman = romanMap[copiedKana.slice(0, 1)];
 
     if (currentKana == "っ") {
@@ -57,7 +61,13 @@ export function kanaToRoman(kana: string) {
         if (!copiedKana) {
           currentRoman.pop();
         } else {
-          if (nextRoman[0].match(/^[aiueony]/)) currentRoman.pop();
+          if (nextRoman) {
+            if (nextRoman[0].match(/^[aiueony]/)) currentRoman.pop();
+          } else {
+            // 次が全角英数字以外ならnではない
+            if (!copiedKana.slice(0, 1).match(/[Ａ-Ｚａ-ｚ]/)) currentRoman.pop()
+          }
+
         }
       }
       retRoman.push(currentRoman);
