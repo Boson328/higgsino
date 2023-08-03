@@ -1,6 +1,6 @@
 {
   "name": "higgsino",
-  "version": "1.0.2",
+  "version": "1.0.31",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,6 +1,9 @@
-import { Word } from "../src/index"
+import { Word, kanaToRoman } from "../src/index"
 
 test("log test", () => {
     let word = new Word("型関係", "ゔらめ")
-    console.log(word.roman.array.all)
+    word = new Word("型関係", "ゔらめ", [ [ 'vu' ], [ 'ra' ], [ 'me' ] ])
+    word = new Word("", "")
+    word.typed("a")
+    console.log(word.roman, kanaToRoman("やりますねぇえええ"))
 })

@@ -11,7 +11,8 @@ type text = {
   untyped: string;
 };
 
-export class Word {
+
+class Word {
   private _example: string = "";
   private _kana: string = "";
   private _roman: string[][] = [[""]];
@@ -21,10 +22,10 @@ export class Word {
   private _charTyped: string = "";
   private _isFinish: boolean = false;
 
-  constructor(kanji: string, kana: string) {
-    this._example = kanji;
+  constructor(example: string, kana: string, roman?: string[][]) {
+    this._example = example;
     this._kana = kana;
-    this._roman = kanaToRoman(kana);
+    this._roman = roman ? roman : kanaToRoman(kana);
     this._pattern = new Array(this._roman.length).fill(0);
   }
 
@@ -109,7 +110,7 @@ export class Word {
   }
 
   typed(key: string): result {
-    if (!this._isFinish) {
+    if (!this._isFinish && this._roman[this._charIndex]) {
       // nが一つでも打てる場合
       if (this._roman[this._charIndex].includes("n")) {
         for (let j = 0; j < this._roman[this._charIndex + 1].length; j++) {
@@ -153,3 +154,5 @@ export class Word {
     }
   }
 }
+
+export { kanaToRoman, Word };
